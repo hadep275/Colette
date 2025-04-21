@@ -2,17 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Colette — Live beautifully, every day.</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <img src="colette-logo.jpeg" alt="Colette Logo" class="logo-img" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Outfit:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --plum: #3c1e3c;
-      --blush: #f7e6ea;
-      --pearl: #fdfaf7;
+      --primary: #9f7aea;
+      --primary-light: #b794f4;
+      --primary-dark: #805ad5;
+      --background: #13111b;
+      --charcoal: #1c1925;
+      --charcoal-light: #242230;
+      --accent: #f0e7ff;
+      --accent-secondary: #dccef8;
+      --eggplant: #554971;
       --gold: #c7b299;
+
+      --menstrual: #a8304a;
+      --follicular: #6d28d9;
+      --ovulation: #d97706;
+      --luteal: #c08eaf;
+
+      --success: #48bb78;
+      --warning: #ed8936;
+      --destructive: #e53e3e;
+      --info: #3182ce;
     }
 
     * {
@@ -23,78 +39,77 @@
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: var(--pearl);
-      color: var(--plum);
+      background: var(--background);
+      color: var(--accent);
       line-height: 1.6;
     }
 
     header {
-      background: var(--pearl);
-      padding: 2rem 1.5rem;
       text-align: center;
-      border-bottom: 1px solid var(--blush);
+      padding: 3rem 1.5rem 2rem;
+      background-color: var(--charcoal);
     }
+    
+    .logo-img {
+  width: 160px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
-      color: var(--plum);
-      letter-spacing: 2px;
-    }
 
     .tagline {
-      font-style: italic;
-      color: var(--gold);
-      margin-top: 0.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease forwards;
     }
 
     main {
-      padding: 3rem 1.5rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      padding: 3rem 1.5rem;
     }
 
-    .section {
+    section {
       margin-bottom: 4rem;
     }
 
     h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--plum);
+      color: var(--primary-light);
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
     .about {
+      text-align: center;
       font-size: 1.2rem;
+      color: var(--accent-secondary);
       max-width: 700px;
       margin: auto;
-      color: #4e2b4e;
     }
-    
-    .logo-img {
-  width: 180px;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 1rem;
-}
-
 
     .features {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       justify-content: center;
+      margin-top: 2rem;
     }
 
     .feature-card {
-      background: var(--blush);
+      background: var(--charcoal-light);
+      border: 1px solid var(--eggplant);
       padding: 1.5rem;
-      border-radius: 10px;
+      border-radius: 12px;
       width: 250px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(60, 30, 60, 0.1);
       transition: transform 0.3s ease;
+      box-shadow: 0 4px 20px rgba(159, 122, 234, 0.1);
     }
 
     .feature-card:hover {
@@ -103,99 +118,106 @@
 
     .feature-title {
       font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--accent);
       margin-bottom: 0.5rem;
-      color: var(--plum);
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: var(--accent-secondary);
     }
 
     .email-form {
       text-align: center;
+      margin-top: 2rem;
     }
 
     input[type="email"] {
       padding: 0.75rem 1rem;
       width: 70%;
       max-width: 400px;
-      border: 1px solid var(--gold);
-      border-radius: 5px;
+      border: 1px solid var(--primary-light);
+      background: var(--charcoal-light);
+      color: var(--accent);
+      border-radius: 8px;
       font-family: 'Outfit', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    input::placeholder {
+      color: var(--accent-secondary);
     }
 
     button {
-      margin-top: 1rem;
       padding: 0.75rem 2rem;
       border: none;
-      background: var(--plum);
-      color: var(--pearl);
+      background: var(--primary-dark);
+      color: var(--accent);
       font-family: 'Outfit', sans-serif;
-      border-radius: 50px;
+      font-size: 1rem;
+      border-radius: 40px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
     button:hover {
-      background: #2e1533;
+      background: var(--primary);
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
       padding: 2rem 1.5rem;
-      color: #836d83;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1.5s forwards ease;
+      color: var(--accent-secondary);
+      background: var(--charcoal);
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="logo fade-in">Colette</div>
-    <div class="tagline fade-in">Live beautifully, every day.</div>
+    <!-- Replace with your actual logo if desired -->
+    <img src="assets/colette-logo.svg" alt="Colette Logo" class="logo-img" />
+    <div class="tagline">Live beautifully, every day.</div>
   </header>
 
   <main>
-    <section class="section fade-in">
+    <section>
       <h2>Meet Colette</h2>
       <p class="about">
-        Colette is your personal lifestyle companion—designed to help you live with elegant structure, radiant health, and intelligent self-development. 
-        From habit design to cycle syncing, from financial refinement to poetic daily rituals—Colette makes becoming *her* feel inevitable.
+        Colette is your private lifestyle OS—a digital companion for women becoming their most intelligent, radiant, and structured selves. From cycle-based planning to elegant habit rituals and refined financial tools, Colette isn’t just an app—it’s a way of life.
       </p>
     </section>
 
-    <section class="section fade-in">
+    <section>
       <h2>What You'll Unlock</h2>
       <div class="features">
         <div class="feature-card">
-          <div class="feature-title">Daily Dashboard</div>
-          <p>Mirror affirmations, moods & rituals to center your day with intention.</p>
+          <div class="feature-title">🪞 Mirror Dashboard</div>
+          <p>Start your day with affirmations, moods & rituals that align with your goals and femininity.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-title">Lunaria</div>
-          <p>Elegant cycle tracking meets hormonal harmony & lunar rhythm.</p>
+          <div class="feature-title">🌙 Lunaria</div>
+          <p>Track your full cycle journey—hormonal rhythms, phases, moods, and rituals in sync with your biology.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-title">Financial Elegance</div>
-          <p>Track net worth, spending, and align with a life of soft luxury.</p>
+          <div class="feature-title">💎 Financial Elegance</div>
+          <p>Track net worth, curate luxury goals, and organize your soft wealth blueprint with style.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-title">AI Companion</div>
-          <p>Your soft-spoken digital guide, coaching you toward the life you deserve.</p>
+          <div class="feature-title">🪄 Colette AI</div>
+          <p>Soft-spoken digital guidance and daily coaching designed to elevate you in every moment.</p>
         </div>
       </div>
     </section>
 
-    <section class="section fade-in">
+    <section>
       <h2>Join the Waitlist</h2>
       <div class="email-form">
         <input type="email" placeholder="Your email address" />
@@ -206,7 +228,7 @@
   </main>
 
   <footer>
-    © 2025 Colette. Crafted with intention.
+    © 2025 Colette. Designed with quiet power & soft precision.
   </footer>
 </body>
 </html>
