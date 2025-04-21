@@ -242,14 +242,17 @@
       headers: {
         "Content-Type": "application/json"
       }
-    });
-
-    if (response.ok) {
-      alert("You're on the list ✨ We'll be in touch soon.");
+    })
+    .then(res => res.text())
+    .then(data => {
+      console.log("✅ Server response:", data);
+      alert("You're on the list 💌 ✨ We'll be in touch soon.");
       emailInput.value = "";
-    } else {
-      alert("Oops. Something went wrong.");
-    }
+    })
+    .catch(err => {
+      console.error("❌ Error sending email:", err);
+      alert("Something went wrong. Please try again.");
+    });
   });
 </script>
 
