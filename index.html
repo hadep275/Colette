@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colette — Live beautifully, every day.</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Outfit:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --plum: #3c1e3c;
+      --blush: #f7e6ea;
+      --pearl: #fdfaf7;
+      --gold: #c7b299;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--pearl);
+      color: var(--plum);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--pearl);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--blush);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: var(--plum);
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: var(--gold);
+      margin-top: 0.5rem;
+    }
+
+    main {
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--plum);
+    }
+
+    .about {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      color: #4e2b4e;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .feature-card {
+      background: var(--blush);
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(60, 30, 60, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--plum);
+    }
+
+    .email-form {
+      text-align: center;
+    }
+
+    input[type="email"] {
+      padding: 0.75rem 1rem;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid var(--gold);
+      border-radius: 5px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      background: var(--plum);
+      color: var(--pearl);
+      font-family: 'Outfit', sans-serif;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #2e1533;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1.5rem;
+      color: #836d83;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s forwards ease;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo fade-in">Colette</div>
+    <div class="tagline fade-in">Live beautifully, every day.</div>
+  </header>
+
+  <main>
+    <section class="section fade-in">
+      <h2>Meet Colette</h2>
+      <p class="about">
+        Colette is your personal lifestyle companion—designed to help you live with elegant structure, radiant health, and intelligent self-development. 
+        From habit design to cycle syncing, from financial refinement to poetic daily rituals—Colette makes becoming *her* feel inevitable.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <h2>What You'll Unlock</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-title">Daily Dashboard</div>
+          <p>Mirror affirmations, moods & rituals to center your day with intention.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Lunaria</div>
+          <p>Elegant cycle tracking meets hormonal harmony & lunar rhythm.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Financial Elegance</div>
+          <p>Track net worth, spending, and align with a life of soft luxury.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">AI Companion</div>
+          <p>Your soft-spoken digital guide, coaching you toward the life you deserve.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in">
+      <h2>Join the Waitlist</h2>
+      <div class="email-form">
+        <input type="email" placeholder="Your email address" />
+        <br />
+        <button>Notify Me</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Colette. Crafted with intention.
+  </footer>
+</body>
+</html>
