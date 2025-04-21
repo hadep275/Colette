@@ -241,11 +241,10 @@
       mode: "no-cors"
       body: JSON.stringify({ email }),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/x-www-form-urlencoded"
       }
     })
-    .then(res => res.text())
-    .then(data => {
+    .then(() => {
       console.log("✅ Server response:", data);
       alert("You're on the list 💌 ✨ We'll be in touch soon.");
       emailInput.value = "";
