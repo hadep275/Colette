@@ -10,10 +10,10 @@ body {
 .hero {
   text-align: center;
   padding: 4rem 1rem;
-  background: linear-gradient(145deg, #805ad5, #9f7aea);
+  background: linear-gradient(145deg, #554971, #805ad5);
 }
 .logo {
-  width: 80px;
+  width: 120px;
   margin-bottom: 1rem;
 }
 .hero h1 {
@@ -116,6 +116,41 @@ body {
   cursor: pointer;
 }
 .upgrade-button:hover {
+  background-color: #b794f4;
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #1c1925;
+}
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.newsletter p {
+  margin-bottom: 1.5rem;
+  color: #dccef8;
+}
+.newsletter input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 1rem;
+  font-family: inherit;
+}
+.newsletter button {
+  background-color: #9f7aea;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.newsletter button:hover {
   background-color: #b794f4;
 }
 
